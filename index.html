@@ -112,6 +112,26 @@ body.present.fs .book{inset:0}
   .page{display:block!important;position:relative!important;left:auto!important;top:auto!important;transform:none!important;box-shadow:none!important;width:297mm;height:210mm;page-break-after:always;break-after:page;margin:0}
   .page:last-child{page-break-after:auto;break-after:auto}
 }
+
+/* ---- contraste (vérifié le 17/11/2026) ---- */
+.page:not(.light) > .ph + .veil::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(8,8,7,.62) 0,rgba(8,8,7,0) 17%,rgba(8,8,7,0) 84%,rgba(8,8,7,.62) 100%)}
+.page:not(.light) .kicker{color:rgba(239,233,222,.86)}
+.page:not(.light) .folio{color:rgba(239,233,222,.72)}
+.page:not(.light) .cap{color:rgba(239,233,222,.86)}
+.page:not(.light) .note{color:rgba(239,233,222,.78)}
+.page:not(.light) .body{color:#ebe5d9}
+.page:not(.light) .kicker,.page:not(.light) .folio,.page:not(.light) .cap,.page:not(.light) .note,
+.page:not(.light) .body,.page:not(.light) .day,.page:not(.light) .sub{text-shadow:0 0 16px rgba(8,8,7,.65),0 1px 2px rgba(8,8,7,.55)}
+.light .folio{color:rgba(27,26,24,.7)}
+.light .note,.itin .k{color:#5e5951}
+.itin .s em{color:#5e5951}
+.page:not(.light) > .ph + .veil::before{background:linear-gradient(180deg,rgba(8,8,7,.74) 0,rgba(8,8,7,0) 18%,rgba(8,8,7,0) 82%,rgba(8,8,7,.74) 100%)}
+.page:not(.light) .kicker,.page:not(.light) .cap{color:var(--ivoire)}
+.page:not(.light) .folio{color:rgba(239,233,222,.88)}
+.page:not(.light) .day,.page:not(.light) .sub{color:#e6dfd2}
+.veil.left{background:linear-gradient(90deg,rgba(8,8,7,.86) 0%,rgba(8,8,7,.58) 40%,rgba(8,8,7,0) 66%)}
+.veil.deep{background:radial-gradient(ellipse at 50% 50%,rgba(8,8,7,.5) 0%,rgba(8,8,7,.84) 80%)}
 </style>
 <style>/* Interactive presentation layer — only active in presentation mode (body.present).
    Print / PDF and brochure mode are not affected. */
